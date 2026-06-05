@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+body.dark {
+  background-color: #0b0f19;
+  color: #f3f4f6;
+}
+
+/* Custom class to enable smooth transition on select components */
+.theme-transition {
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.15s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium Dark Mode overrides for Student Dashboard sub-views */
+.dark .bg-white {
+  background-color: #111827 !important;
+}
+.dark .bg-gray-50 {
+  background-color: #030712 !important;
+}
+.dark .bg-gray-100 {
+  background-color: #1f2937 !important;
+}
+.dark .border-gray-200, 
+.dark .border-gray-100,
+.dark .border {
+  border-color: #1f2937 !important;
+}
+.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+.dark .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+.dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+.dark .text-gray-600 {
+  color: #d1d5db !important;
+}
+.dark .text-gray-500 {
+  color: #9ca3af !important;
+}
+.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+.dark .text-gray-300 {
+  color: #6b7280 !important;
+}
+.dark .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  border-color: rgba(239, 68, 68, 0.2) !important;
+}
+.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  border-color: rgba(59, 130, 246, 0.2) !important;
+}
+.dark .bg-green-50 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  border-color: rgba(16, 185, 129, 0.2) !important;
+}
+.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  border-color: rgba(245, 158, 11, 0.2) !important;
+}
+.dark .bg-red-100 {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+}
+.dark .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+.dark .bg-green-100 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+.dark .bg-amber-100 {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+}
+.dark .bg-pink-100 {
+  background-color: rgba(236, 72, 153, 0.15) !important;
+}
+.dark .text-green-605,
+.dark .text-green-600 {
+  color: #34d399 !important;
+}
+.dark .text-green-700 {
+  color: #a7f3d0 !important;
+}
+.dark .text-green-800 {
+  color: #d1fae5 !important;
+}
+.dark .text-red-650,
+.dark .text-red-600 {
+  color: #f87171 !important;
+}
+.dark .text-red-700 {
+  color: #fca5a5 !important;
+}
+.dark .text-red-800 {
+  color: #fee2e2 !important;
+}
+.dark .text-blue-650,
+.dark .text-blue-600 {
+  color: #60a5fa !important;
+}
+.dark .text-amber-600 {
+  color: #fbbf24 !important;
+}
+.dark .text-amber-800 {
+  color: #fef3c7 !important;
+}
+.dark .text-pink-600 {
+  color: #f472b6 !important;
+}
+
+/* Sidebar Specific overrides for dark mode */
+.dark aside {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+.dark aside .text-gray-900 {
+  color: #ffffff !important;
+}
+.dark aside .text-gray-600 {
+  color: #94a3b8 !important;
+}
+.dark aside .text-gray-600:hover {
+  color: #ffffff !important;
+  background-color: #1e293b !important;
+}
+.dark aside .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  color: #f87171 !important;
+}
+
+/* Header & Dropdown */
+.dark header {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+.dark header button:hover {
+  background-color: #1e293b !important;
+}
+.dark header #user-menu-btn:hover {
+  background-color: #1e293b !important;
+}
+.dark header .absolute.right-0 {
+  background-color: #111827 !important;
+  border-color: #1e293b !important;
+}
+.dark header .absolute.right-0 .bg-gradient-to-br {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(244, 63, 94, 0.1)) !important;
+  border-color: #1e293b !important;
+}
+.dark header .absolute.right-0 button:hover {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+/* Dashboard Banner */
+.dark .bg-gradient-to-r.from-red-600.to-red-800 {
+  background: linear-gradient(135deg, #7f1d1d, #991b1b) !important;
+}
+
+/* Virtual student ID card */
+.dark .id-card-body {
+  background: linear-gradient(180deg, #1e293b, #0f172a) !important;
+  border-color: #334155 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+.dark .id-card-body h4 {
+  color: #ffffff !important;
+}
+.dark .id-card-body .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+.dark .id-card-body .bg-gray-100 {
+  background-color: #1e293b !important;
+  color: #94a3b8 !important;
+}
+.dark .id-card-body .bg-white {
+  background-color: #ffffff !important; /* Keep QR code white for high contrast */
+}
+
+/* Modals & Dialog overlays */
+.dark .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Forms input tags inside dark container */
+.dark select, 
+.dark input[type="text"], 
+.dark input[type="tel"], 
+.dark input[type="email"], 
+.dark input[type="date"], 
+.dark textarea {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+  border-color: #374151 !important;
+}
+
+.dark input::placeholder, 
+.dark textarea::placeholder {
+  color: #6b7280 !important;
+}
+
